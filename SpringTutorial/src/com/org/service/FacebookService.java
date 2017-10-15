@@ -4,12 +4,19 @@ public class FacebookService implements MessageService {
 	
 	private String servicename;
 	
+	
+	
+
+	public FacebookService(String servicename) {
+		
+		this.servicename = servicename;
+		
+	}
+
 
 	public String getServicename() {
 		return servicename;
 	}
-
-
 
 
 	public void setServicename(String servicename) {

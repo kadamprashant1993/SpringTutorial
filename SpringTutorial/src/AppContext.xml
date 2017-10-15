@@ -39,7 +39,9 @@
 	
 	<bean id="fb" class="com.org.service.FacebookService">
 		
-		<property name="servicename" value="FacebookService"></property>
+		<!-- <property name="servicename" value="FacebookService"></property> -->
+		
+		<constructor-arg  value="FacebookService"></constructor-arg>
 		
 	</bean>
 	
