@@ -37,11 +37,7 @@
 	<bean id="tw" class="com.org.service.TwitterService"></bean>
 	
 	
-	<bean id="fb" class="com.org.service.FacebookService">
-		
-		<property name="servicename" value="FacebookService"></property>
-		
-	</bean>
+	<bean id="fb" class="com.org.service.FacebookService"></bean>
 	
 	
 	<bean id="TwApp" class="com.org.consumer.ServiceConsumer">
