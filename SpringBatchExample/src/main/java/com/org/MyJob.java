@@ -1,4 +1,4 @@
-package com.mkyong;
+package com.org;
 
 public class MyJob {
 	static{

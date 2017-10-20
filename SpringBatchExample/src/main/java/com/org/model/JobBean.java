@@ -1,4 +1,4 @@
-package com.mkyong.model;
+package com.org.model;
 
 public class JobBean {
 	private String id;
