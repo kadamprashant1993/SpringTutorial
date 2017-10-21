@@ -22,8 +22,18 @@ public class Task2 implements Tasklet{
 	@Override
 	public RepeatStatus execute(StepContribution arg0, ChunkContext arg1) throws Exception {
 		
+		JobBean jobtemp=null;
 		
-		System.out.println("Step 2::"+job.getId());
+		for (int i = 0; i < 10; i++) {
+			jobtemp=(JobBean) job.clone();
+			if (i==2||i==3||i==5) {
+				jobtemp.setId("6");
+			}
+			
+			System.out.println("Step 2::"+jobtemp.getId());
+			
+		}
+		
 		
 		
 		return RepeatStatus.FINISHED;

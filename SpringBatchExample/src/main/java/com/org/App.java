@@ -7,6 +7,8 @@ import org.springframework.batch.core.launch.JobLauncher;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import com.org.model.JobBean;
+
 public class App {
 	public static void main(String[] args) {
 
@@ -20,11 +22,16 @@ public class App {
 				new ClassPathXmlApplicationContext(springConfig);
 		
 		JobLauncher jobLauncher = (JobLauncher) context.getBean("jobLauncher");
+		JobBean bean = (JobBean) context.getBean("jobbean");
+		bean.setId("2");
+		System.out.println("JOB::"+bean.getId());
 		Job job = (Job) context.getBean("reportJob");
 
 		try {
 
 			JobExecution execution = jobLauncher.run(job, new JobParameters());
+			//sexecution.getExecutionContext().get("jobbean");
+			System.out.println(execution.getExecutionContext().get("jobbean"));
 			System.out.println("Exit Status : " + execution.getStatus());
 
 		} catch (Exception e) {

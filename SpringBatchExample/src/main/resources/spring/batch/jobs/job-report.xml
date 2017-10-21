@@ -26,8 +26,8 @@
 	</batch:job>
 	
 	
-	<bean id="jobbean" class="com.org.model.JobBean" >
-		<property name="id" value="1"></property>
+	<bean id="jobbean" class="com.org.model.JobBean" scope="prototype" >
+		<property name="id" value="0"></property>
 	
 	</bean>
 	

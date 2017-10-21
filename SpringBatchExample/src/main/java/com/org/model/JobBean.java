@@ -1,6 +1,6 @@
 package com.org.model;
 
-public class JobBean {
+public class JobBean implements Cloneable {
 	private String id;
 
 	public String getId() {
@@ -11,6 +11,9 @@ public class JobBean {
 		this.id = id;
 	}
 	
+	 public Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
 	
 
 }
