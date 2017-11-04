@@ -9,7 +9,7 @@
 
     <!-- <context:property-placeholder location="classpath:/database.properties" />
     <context:component-scan base-package="com.foo" />
-
+ 
 
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
         <property name="driverClassName" value="${jdbc.driverClassName}" />
